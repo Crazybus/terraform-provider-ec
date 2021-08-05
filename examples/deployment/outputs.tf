@@ -1,7 +1,3 @@
-output "deployment_id" {
-  value = ec_deployment.example_minimal.id
-}
-
 output "elasticsearch_version" {
   value = ec_deployment.example_minimal.version
 }
@@ -19,5 +15,6 @@ output "elasticsearch_username" {
 }
 
 output "elasticsearch_password" {
-  value = ec_deployment.example_minimal.elasticsearch_password
+  value     = ec_deployment.example_minimal.elasticsearch_password
+  sensitive = true
 }
